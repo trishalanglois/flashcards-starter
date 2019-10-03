@@ -137,7 +137,7 @@ describe('Round', function() {
     expect(round.calculatePercentCorrect).to.be.a('function');
   });
 
-  it.skip('should calculate the percentage of correct answers', function() {
+  it('should calculate the percentage of correct answers', function() {
     const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
     const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
     const card3 = new Card(12, 'What is Travis\'s middle name?', ['Lex', 'William', 'Fitzgerald'], 'Fitzgerald');
@@ -146,6 +146,7 @@ describe('Round', function() {
     round.takeTurn('sea otter');
     round.takeTurn('gallbladder');
     round.takeTurn('Fitzgerald');
+    console.log(round.correctGuesses);
     expect(round.calculatePercentCorrect()).to.equal(100);
   })
 
@@ -161,7 +162,7 @@ describe('Round', function() {
     expect(round.endRound).to.be.a('function');
   })
 
-  it('should return a message at the end of the round with the percentage of answers', function () {
+  it.skip('should return a message at the end of the round with the percentage of answers', function () {
     const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
     const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
     const card3 = new Card(12, 'What is Travis\'s middle name?', ['Lex', 'William', 'Fitzgerald'], 'Fitzgerald');
