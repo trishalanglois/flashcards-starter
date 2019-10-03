@@ -8,7 +8,7 @@ const Round = require('../src/Round');
 
 
 describe('Game', function() {
-  it('should have a property of current round', function() {
+  it.skip('should have a property of current round', function() {
     const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
     const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
     const card3 = new Card(12, 'What is Travis\'s middle name?', ['Lex', 'William', 'Fitzgerald'], 'Fitzgerald');
@@ -28,7 +28,9 @@ describe('Game', function() {
     expect(game.start).to.be.a('function');
   });
 
-  it('should have a set of cards', function() {
-    expect(game.start()).to.deep.equal()
+  // console.log(game.prototypeQuestions);
+  it('should start game', function() {
+    const game = new Game();
+    game.start();
   })
 });
