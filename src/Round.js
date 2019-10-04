@@ -26,7 +26,6 @@ class Round {
     var correctGuesses = this.turns - this.incorrectGuesses.length;
     var prePercentNumber = correctGuesses / this.turns;
     var percentCorrect = Math.floor(prePercentNumber * 100);
-    console.log(percentCorrect);
     return percentCorrect;
   }
   endRound() {
